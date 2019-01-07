@@ -46,7 +46,7 @@
         </ul>
       </nav>
       <p class="header-contacts">С 10 до 20, ежедневно
-        <span>8 812 450-25-25</span>
+        <a class="phone-link" href="tel:+7(812)450-25-25">8 812 450-25-25</a>
       </p>
     </header>
     <main>
@@ -62,14 +62,87 @@
       </ul>
       <section class="filters">
         <h2 class="visually-hidden">Форма с фильтрами</h2>
-        <!-- Здесь будет форма -->
+        <form class="filter-form" action="" method="get">
+          <fieldset>
+            <legend>Сортировка</legend>
+            <select class="sort-select" name="sort">
+              <option value="popular">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fatty">по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend class="visually-hidden">Диапазон цен</legend>
+            <p>Цена: <output name="min-prace">100</output> руб. - <output name="max-price">500</output> руб.</p>
+            <div class="range-controls">
+              <div class="scale"></div>
+              <div class="toggle"></div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Жирность</legend>
+            <ul class="fatty-list">
+              <li>
+                <label>
+                  <input class="fatty-input" type="radio" name="fatty" value="0%">
+                  0%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="fatty-input" type="radio" name="fatty" value="before10%" checked>
+                  до 10%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="fatty-input" type="radio" name="fatty" value="before30%">
+                  до 30%
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input class="fatty-input" type="radio" name="fatty" value="after30%">
+                  выше 30%
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители</legend>
+            <ul class="filler-list">
+              <li>
+                <input class="filler-input" id="chocolate" type="checkbox" name="chocolate" checked>
+                <label class="filler-label" for="chocolate">шоколадные</label>
+              </li>
+              <li>
+                <input class="filler-input" id="sugar-powder" type="checkbox" name="sugar-powder" checked>
+                <label class="filler-label" for="sugar-powder">сахарные присыпки</label>
+              </li>
+              <li>
+                <input class="filler-input" id="fruits" type="checkbox" name="fruits">
+                <label class="filler-label" for="fruits">фрукты</label>
+              </li>
+              <li>
+                <input class="filler-input" id="syrup" type="checkbox" name="syrup">
+                <label class="filler-label" for="syrup">сиропы</label>
+              </li>
+              <li>
+                <input class="filler-input" id="jam" type="checkbox" name="jam">
+                <label class="filler-label" for="jam">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button button-filler" type="submit">Применить</button>
+        </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Каталог мороженого</h2>
         <ul class="catalog-list">
           <li>
             <div class="image-wrapper">
-              <img src="img/orange.png" alt="">
+              <img src="img/orange.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой" width="267" height="267">
             </div>
             <p>310Р<span>/кг</span></p>
             <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
@@ -77,7 +150,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/chocolate.png" alt="" width="267" height="267">
+              <img src="img/chocolate.png" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
             </div>
             <p>380Р<span>/кг</span></p>
             <p>Сливочно-кофейное с кусочками шоколада</p>
@@ -85,7 +158,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/strawberry.png" alt="" width="267" height="267">
+              <img src="img/strawberry.png" alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
             </div>
             <p>355Р<span>/кг</span></p>
             <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
@@ -93,7 +166,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/cremebrulee.png" alt="" width="267" height="267">
+              <img src="img/cremebrulee.png" alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
             </div>
             <p>415Р<span>/кг</span></p>
             <p>Сливочное крем-брюле с карамельной подливкой</p>
@@ -101,7 +174,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/lingonberry_jam.png" alt="" width="267" height="267">
+              <img src="img/lingonberry_jam.png" alt="Сливочное с брусничным джемом" width="267" height="267">
             </div>
             <p>325Р<span>/кг</span></p>
             <p>Сливочное с брусничным джемом</p>
@@ -109,7 +182,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/blueberry.png" alt="" width="267" height="267">
+              <img src="img/blueberry.png" alt="Сливочно-черничное с цельными ягодами черники" width="267" height="267">
             </div>
             <p>410Р<span>/кг</span></p>
             <p>Сливочно-черничное с цельными ягодами черники</p>
@@ -117,7 +190,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/lemon.png" alt="" width="267" height="267">
+              <img src="img/lemon.png" alt="Сливочно-лимонное с карамельной присыпкой" width="267" height="267">
             </div>
             <p>375Р<span>/кг</span></p>
             <p>Сливочно-лимонное с карамельной присыпкой</p>
@@ -125,7 +198,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/chocolate_flakes.png" alt="" width="267" height="267">
+              <img src="img/chocolate_flakes.png" alt="Сливочное с шоколадной стружкой" width="267" height="267">
             </div>
             <p>320Р<span>/кг</span></p>
             <p>Сливочное с шоколадной стружкой</p>
@@ -133,7 +206,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/vanila.png" alt="" width="267" height="267">
+              <img src="img/vanila.png" alt="Сливочно-ванильное с кусочками шоколада" width="267" height="267">
             </div>
             <p>440Р<span>/кг</span></p>
             <p>Сливочно-ванильное с кусочками шоколада</p>
@@ -141,7 +214,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/mentol.png" alt="" width="267" height="267">
+              <img src="img/mentol.png" alt="Сливочноe с ментоловым сиропом" width="267" height="267">
             </div>
             <p>435Р<span>/кг</span></p>
             <p>Сливочноe с ментоловым сиропом</p>
@@ -149,7 +222,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/black_chocolate.png" alt="" width="267" height="267">
+              <img src="img/black_chocolate.png" alt="Сливочное с кусочками черного шоколада" width="267" height="267">
             </div>
             <p>355Р<span>/кг</span></p>
             <p>Сливочное с кусочками черного шоколада</p>
@@ -157,7 +230,7 @@
           </li>
           <li>
             <div class="image-wrapper">
-              <img src="img/mint.png" alt="" width="267" height="267">
+              <img src="img/mint.png" alt="Сливочное с мятным сиропом" width="267" height="267">
             </div>
             <p>420Р<span>/кг</span></p>
             <p>Сливочное с мятным сиропом</p>
@@ -232,10 +305,56 @@
       </div>
       <div class="footer-privacy">
         <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/htmlacademy.svg" alt="Логотип Академии">
+          <img src="img/htmlacademy.svg" alt="Логотип Академии" width="108" height="38">
         </a>
         <p class="text-privacy">Сделано в HTML Academy &#169; 2017</p>
       </div>
     </footer>
+
+    <section class="modal modal-cart">
+      <h2 class="visually-hidden">Товары в корзине</h2>
+      <table class="cart-list">
+        <tr class="cart-item">
+          <td>
+            <button class="button-delete">
+              <span class="visually-hidden">Удалить товар из корзины</span>
+            </button>
+          </td>
+          <td>
+            <img src="http://placehold.it/150x100" alt="Пломбир с апельсиновым джемом" width="33">
+          </td>
+          <td>
+            Пломбир с апельсиновым джемом
+          </td>
+          <td>
+            1,5 кг х 200 руб.
+          </td>
+          <td>
+            300 руб.
+          </td>
+        </tr>
+        <tr class="cart-item">
+          <td>
+            <button class="button-delete">
+              <span class="visually-hidden">Удалить товар из корзины</span>
+            </button>
+          </td>
+          <td>
+            <img src="http://placehold.it/150x100" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33">
+          </td>
+          <td>
+            Клубничный пломбир с присыпкой из белого шоколада
+          </td>
+          <td>
+            1,5 кг х 300 руб.
+          </td>
+          <td>
+            450 руб.
+          </td>
+        </tr>
+      </table>
+      <p>Итого: <output name="sum">750</output> руб.</p>
+      <button class="button button-cart" type="button">Оформить заказ</button>
+    </section>
   </body>
 </html>
