@@ -1,0 +1,24 @@
+{
+  "name": "gllacy",
+  "version": "1.0.0",
+  "description": "* Студент: [Владимир Дранников](https://up.htmlacademy.ru/htmlcss/23/user/382731). * Наставник: [Кекс].",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrannikovVladimir/382731-gllacy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrannikovVladimir/382731-gllacy/issues"
+  },
+  "homepage": "https://github.com/DrannikovVladimir/382731-gllacy#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0"
+  }
+}
