@@ -15,9 +15,9 @@
           </a>
           <ul class="site-list">
             <li class="site-item">
-              <a class="catalog-link catalog-link-current" href="catalog.html">Каталог</a>
-              <ul class="modal-list">
-                <li class="modal-item">Новинки</li>
+              <a class="site-link catalog-link catalog-link-current" href="catalog.html">Каталог</a>
+              <ul class="modal-list modal">
+                <li class="modal-item modal-item-title">Новинки</li>
                 <li class="modal-item">
                   <a href="catalog.html">Сливочное</a>
                 </li>
@@ -40,18 +40,22 @@
             </li>
           </ul>
           <ul class="user-list">
-            <li class="user-item user-item-form">
-              <a href="search.html" class="search-link"><span class="visually-hidden">Поиск</span></a>
-              <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
-                <p>
-                  <label class="visually-hidden" for="search">Поиск</label>
-                  <input class="search-input" id="search" type="text" name="search" placeholder="Что ищем?">
-                </p>
-              </form>
+            <li class="user-item user-item-search">
+              <a class="search-link" href="search.html">
+                <span class="visually-hidden">Поиск</span>
+              </a>
+              <div class="wrapper-form-search modal">
+                <form class="form-search" action="https://echo.htmlacademy.ru" method="get">
+                  <p>
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input class="search-input" id="search" type="text" name="search" placeholder="Что ищем?">
+                  </p>
+                </form>
+              </div>
             </li>
-            <li class="user-item">
+            <li class="user-item user-item-login">
               <a class="login-link" href="login-link.html">Вход</a>
-              <div class="modal modal-login">
+              <div class="wrapper-form-login modal">
                 <form class="form-login" action="https://echo.htmlacademy.ru" method="post">
                   <p>
                     <label class="visually-hidden" for="login">Электронная почта</label>
@@ -61,16 +65,18 @@
                     <label class="visually-hidden" for="password">Пароль</label>
                     <input class="password-input" id="password" type="password" name="password" placeholder="Пароль">
                   </p>
-                  <p>
+                  <p class="wrapper-button-link">
                     <button class="button button-login" type="submit" name="button">Войти</button>
-                    <a class="restore-password" href="restore.html">Забыли пароль?</a>
-                    <a class="new-registry" href="registry.html">Новая регистрация</a>
+                    <div class="wrapper-link-form-login">
+                      <a class="restore-password" href="restore.html">Забыли пароль?</a>
+                      <a class="new-registry" href="registry.html">Новая регистрация</a>
+                    </div>
                   </p>
                 </form>
               </div>
             </li>
-            <li class="user-item">
-              <a class="cart-link" href="cart.html">2 товара</a>
+            <li class="user-item user-item-cart">
+              <a class="cart-link cart-full" href="cart.html">2 товара</a>
               <section class="modal modal-cart">
                 <h2 class="visually-hidden">Товары в корзине</h2>
                 <table class="cart-list">
@@ -81,15 +87,15 @@
                       </button>
                     </td>
                     <td class="cart-image">
-                      <img src="http://placehold.it/150x100" alt="Пломбир с апельсиновым джемом" width="33">
+                      <img src="img/orange.png" alt="Пломбир с апельсиновым джемом" width="33">
                     </td>
                     <td class="cart-description">
-                      Пломбир с апельсиновым джемом
+                      <p>Пломбир с апельсиновым джемом</p>
                     </td>
                     <td class="cart-expression">
-                      1,5 кг х <span>200 руб.</span>
+                      <p>1,5 кг х <span>200 руб.</span></p>
                     </td>
-                    <td class="cart-sum">
+                    <td class="cart-sum-item">
                       300 руб.
                     </td>
                   </tr>
@@ -100,15 +106,15 @@
                       </button>
                     </td>
                     <td class="cart-image">
-                      <img src="http://placehold.it/150x100" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33">
+                      <img src="img/strawberry.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="33">
                     </td>
                     <td class="cart-description">
-                      Клубничный пломбир с присыпкой из белого шоколада
+                      <p>Клубничный пломбир с присыпкой из белого шоколада</p>
                     </td>
                     <td class="cart-expression">
-                      1,5 кг х <span>300 руб.</span>
+                      <p>1,5 кг х <span>300 руб.</span></p>
                     </td>
-                    <td class="cart-sum">
+                    <td class="cart-sum-item">
                       450 руб.
                     </td>
                   </tr>
@@ -119,7 +125,7 @@
             </li>
           </ul>
         </nav>
-        <p class="header-contacts">С 10 до 20, ежедневно
+        <p class="header-contacts">С 10 до 20, ежедневно<br>
           <a class="phone-link" href="tel:+7(812)450-25-25">8 812 450-25-25</a>
         </p>
       </div>
@@ -132,10 +138,10 @@
         <div class="container">
           <ul class="breadcrums-list">
             <li class="breadcrums-item">
-              <a class="breadcrums-link" href="index.html">Главная</a>
+              <a class="breadcrums-link" href="index.html">Главная<span>»</span></a>
             </li>
             <li class="breadcrums-item">
-              <a class="breadcrums-link" href="catalog.html">Каталог</a>
+              <a class="breadcrums-link" href="catalog.html">Каталог<span>»</span></a>
             </li>
             <li class="breadcrums-item breadcrums-item-current">
               <a class="breadcrums-link">Сливочное</a>
@@ -241,7 +247,7 @@
                 <span class="hits-price">310Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+              <a class="hits-link" href="catalog.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -254,7 +260,7 @@
                 <span class="hits-price">380Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочно-кофейное с кусочками шоколада</p>
+              <a class="hits-link" href="catalog.html">Сливочно-кофейное с кусочками шоколада</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -267,7 +273,7 @@
                 <span class="hits-price">355Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочно-клубничное с присыпкой из белого шоколада</p>
+              <a class="hits-link" href="catalog.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -280,7 +286,7 @@
                 <span class="hits-price">415Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное крем-брюле с карамельной подливкой</p>
+              <a class="hits-link" href="catalog.html">Сливочное крем-брюле с карамельной подливкой</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -293,7 +299,7 @@
                 <span class="hits-price">325Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное с брусничным джемом</p>
+              <a class="hits-link" href="catalog.html">Сливочное с брусничным джемом</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -306,7 +312,7 @@
                 <span class="hits-price">410Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочно-черничное с цельными ягодами черники</p>
+              <a class="hits-link" href="catalog.html">Сливочно-черничное с цельными ягодами черники</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -319,7 +325,7 @@
                 <span class="hits-price">375Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочно-лимонное с карамельной присыпкой</p>
+              <a class="hits-link" href="catalog.html">Сливочно-лимонное с карамельной присыпкой</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -332,7 +338,7 @@
                 <span class="hits-price">320Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное с шоколадной стружкой</p>
+              <a class="hits-link" href="catalog.html">Сливочное с шоколадной стружкой</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -345,7 +351,7 @@
                 <span class="hits-price">440Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочно-ванильное с кусочками шоколада</p>
+              <a class="hits-link" href="catalog.html">Сливочно-ванильное с кусочками шоколада</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -358,7 +364,7 @@
                 <span class="hits-price">435Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочноe с ментоловым сиропом</p>
+              <a class="hits-link" href="catalog.html">Сливочноe с ментоловым сиропом</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -371,7 +377,7 @@
                 <span class="hits-price">355Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное с кусочками черного шоколада</p>
+              <a class="hits-link" href="catalog.html">Сливочное с кусочками черного шоколада</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -384,7 +390,7 @@
                 <span class="hits-price">420Р</span>
                 <span class="hits-units">/кг</span>
               </p>
-              <p class="hits-description">Сливочное с мятным сиропом</p>
+              <a class="hits-link" href="catalog.html">Сливочное с мятным сиропом</a>
               <div class="button-wrapper">
                 <a class="button button-catalog" href="#">Быстрый просмотр</a>
               </div>
@@ -401,20 +407,20 @@
                 <span class="visually-hidden">Назад</span>
               </a>
             </li>
-            <li class="pagination-item pagination-item-cuttent">
-              <a href="catalog.html">1</a>
+            <li class="pagination-item">
+              <a class="pagination-link  pagination-link-current" href="catalog.html">1</a>
             </li>
             <li class="pagination-item">
-              <a href="catalog.html">2</a>
+              <a class="pagination-link" href="catalog.html">2</a>
             </li>
             <li class="pagination-item">
-              <a href="catalog.html">3</a>
+              <a class="pagination-link" href="catalog.html">3</a>
             </li>
             <li class="pagination-item">
-              <a href="catalog.html">4</a>
+              <a class="pagination-link" href="catalog.html">4</a>
             </li>
             <li class="pagination-item">
-              <a href="catalog.html">5</a>
+              <a class="pagination-link" href="catalog.html">5</a>
             </li>
             <li class="pagination-item">
               <a href="catalog.html">
@@ -432,22 +438,22 @@
           <div class="footer-social">
             <ul class="social-list">
               <li class="social-item">
-                <a class="social-link" href="www.twitter.com">
+                <a class="social-link social-twitter" href="www.twitter.com">
                   <span class="visually-hidden">Твитер</span>
                 </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="www.instagram.com">
+                <a class="social-link social-instagram" href="www.instagram.com">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="www.facebook.com">
+                <a class="social-link social-facebook" href="www.facebook.com">
                   <span class="visually-hidden">Фэйсбук</span>
                 </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="www.vk.com">
+                <a class="social-link social-vk" href="www.vk.com">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
