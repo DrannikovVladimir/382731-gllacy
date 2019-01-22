@@ -299,6 +299,26 @@ textarea:focus {
   z-index: -1;
 }
 
+.catalog-link-current {
+  border-bottom: none;
+}
+
+.catalog-link-current::after {
+  content: "";
+
+  position: absolute;
+  top: -6px;
+  left: -14px;
+
+  width: 88px;
+  height: 32px;
+  border-radius: 20px;
+
+  background-color: #d07058;
+
+  z-index: -1;
+}
+
 .catalog-link:hover::before {
   height: 0;
 }
@@ -801,7 +821,7 @@ textarea:focus {
 }
 
 .hits {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .hits-list {
@@ -1131,7 +1151,7 @@ textarea:focus {
 }
 
 .catalog-page .footer {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .footer-wrapper {
@@ -1150,7 +1170,7 @@ textarea:focus {
 
 .footer-social {
   width: 200px;
-  margin-right: 215px;
+  margin-right: 195px;
 }
 
 .social-list {
@@ -1172,9 +1192,9 @@ textarea:focus {
 
 .social-link {
   display: block;
-  width: 36px;
-  height: 36px;
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  width: 38px;
+  height: 38px;
+  border: 4px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
 
   background-repeat: no-repeat;
@@ -1276,7 +1296,7 @@ textarea:focus {
 .footer-logo {
   display: block;
   width: 108px;
-  height: 39px;
+  height: 38px;
 }
 
 .footer-logo img {
@@ -1424,7 +1444,7 @@ textarea:focus {
 }
 
 .filters {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .filter-form {
@@ -1433,13 +1453,13 @@ textarea:focus {
 }
 
 .filters fieldset {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   padding: 0;
   border: none;
 }
 
 .filters legend {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding-left: 15px;
 
   font-size: 14px;
@@ -1699,7 +1719,7 @@ textarea:focus {
   display: block;
   width: 145px;
   padding: 8px 25px;
-  margin-top: 26px;
+  margin-top: 21px;
   border: 1px solid #ffffff;
   border-radius: 40px;
 
@@ -1732,7 +1752,7 @@ textarea:focus {
 }
 
 .catalog {
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 
 .button-catalog {
@@ -1752,7 +1772,7 @@ textarea:focus {
 .catalog-item {
   position: relative;
 
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .catalog-item:hover > .button-wrapper .button-catalog {
@@ -1785,15 +1805,17 @@ textarea:focus {
 }
 
 .pagination-item {
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .pagination-item:first-child a {
+  margin-right: 10px;
   opacity: 0.4;
 }
 
 .pagination-item:last-child {
   margin-right: 0;
+  margin-left: 10px;
 }
 
 .pagination-item:first-child a,
@@ -1813,7 +1835,7 @@ textarea:focus {
   content: '';
 
   position: absolute;
-  top: 5px;
+  top: 3px;
   left: 0;
 
   width: 8px;
@@ -1827,7 +1849,7 @@ textarea:focus {
 }
 
 .pagination-item:first-child a::after {
-  top: 11px;
+  top: 8px;
 
   transform: rotate(45deg);
 }
@@ -1837,20 +1859,20 @@ textarea:focus {
 }
 
 .pagination-item:last-child a::after {
-  top: 11px;
+  top: 8px;
 
   transform: rotate(-45deg);
 }
 
 .pagination-link {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
 
   color: #ffffff;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 26px;
   font-weight: 500;text-align: center;
 }
 
