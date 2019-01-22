@@ -262,7 +262,7 @@
           <span>8 812 450-25-25</span>
           (с 10 до 20 ежедневно)
           </p>
-          <a class="button button-contacts" href="form-feedback.html">Форма обратной связи</a>
+          <a class="button button-contacts" href="form-feedback.htm">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -312,7 +312,7 @@
           </div>
           <div class="footer-privacy">
             <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/htmlacademy.svg" alt="Логотип Академии" width="108" height="39">
+              <img src="img/htmlacademy.png" alt="Логотип Академии" width="108" height="38">
             </a>
             <p class="text-privacy">Сделано в HTML Academy &#169; 2017</p>
           </div>
@@ -342,5 +342,70 @@
         </button>
       </form>
     </section>
+
+    <script type="text/javascript">
+
+      var buttonFeedback = document.querySelector('.button-contacts'),
+          modalFeedback = document.querySelector('.modal-feedback'),
+          closeFeedback = document.querySelector('.button-close'),
+          formFeedback = modalFeedback.querySelector('.feedback-form'),
+          nameFeedback = modalFeedback.querySelector('[name=feedback-name]'),
+          emailFeedback = modalFeedback.querySelector('[name=feedback-email]'),
+          messageFeedback = modalFeedback.querySelector('[name=feedback-message]'),
+          isStorageSupport = true, //Переменная для проверки существования localStorage
+          nameStorage = '',
+          emailStorage = '';
+
+      try {
+        nameStorage = localStorage.getItem('name');
+        emailStorage = localStorage.getItem('email');
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      buttonFeedback.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        modalFeedback.classList.add('modal-show');
+        if (nameStorage && emailStorage) {
+          nameFeedback.value = nameStorage;
+          emailFeedback.value = emailStorage;
+          messageFeedback.focus();
+        } else {
+          nameFeedback.focus();
+        }
+      });
+
+      closeFeedback.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        modalFeedback.classList.remove('modal-show');
+        modalFeedback.classList.remove('modal-error');
+      });
+
+      formFeedback.addEventListener('submit', function(evt) {
+        if (!nameFeedback.value || !emailFeedback.value) {
+          evt.preventDefault();
+          console.log('Заполните поля формы');
+          modalFeedback.classList.remove('modal-error');
+          modalFeedback.offsetWidth = modalFeedback.offsetWidth;
+          modalFeedback.classList.add('modal-error');
+        }  else {
+          if (isStorageSupport) {
+            localStorage.setItem('name', nameFeedback.value);
+            localStorage.setItem('email', emailFeedback.value);
+          }
+        }
+      });
+
+      window.addEventListener('keydown', function(evt) {
+        if (evt.keyCode === 27) {
+          if (modalFeedback.classList.contains('modal-show')) {
+            evt.preventDefault();
+            modalFeedback.classList.remove('modal-show');
+            modalFeedback.classList.remove('modal-error');
+          }
+        }
+      });
+
+    </script>
   </body>
 </html>
